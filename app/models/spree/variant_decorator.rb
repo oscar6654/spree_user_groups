@@ -22,7 +22,8 @@ Spree::Variant.class_eval do
       price_for_user = Spree::User.current.user_group.price_for_variant(self, price)
       new_amount = price_for_user if price_for_user
     end
-    
-    @price_in[currency] = Spree::Price.new(amount: new_amount, currency: currency)
+
+    # This line caused exception in old version. Variant_id can not be nil.
+    @price_in[currency] = Spree::Price.new(variant_id: self.id, amount: new_amount, currency: currency)
   end
 end
