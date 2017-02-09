@@ -1,7 +1,7 @@
 SpreeUserGroups
 ===============
 
-Introduces user groups and calculator to add adjustment for specified user group.
+Introduces user groups and calculator to add adjustment for specified user group.This version support spree 3.1.
 
 
 Installation
