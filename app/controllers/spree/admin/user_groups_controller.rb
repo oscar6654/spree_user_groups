@@ -15,7 +15,7 @@ class Spree::Admin::UserGroupsController < Spree::Admin::ResourceController
   end
 
   def import
-    UserGroup.import(params[:file])
+    Spree::UserGroup.import(params[:file])
     flash.notice = "Uploaded Successfully"
     redirect_to admin_user_groups_path
   end

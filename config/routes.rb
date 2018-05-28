@@ -4,7 +4,9 @@ Spree::Core::Engine.append_routes do
 			member do
 				get :pricing
 				patch :pricing
-				post :import
+			end
+			collection do
+				post 'import'
 			end
 		end
 	end
