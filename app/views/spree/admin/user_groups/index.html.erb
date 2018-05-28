@@ -4,7 +4,7 @@
 
 <% content_for :page_actions do %>
   <%= button_link_to Spree.t(:new_user_group), new_object_url, :icon => 'plus', :id => 'admin_new_user_group_link', class: 'btn-success' %>
-  <%= form_tag import_user_groups_path, multipart: true do %>
+  <%= form_tag import_admin_user_group_path, multipart: true do %>
     <div class="file-field input-field">
         <div class="btn">
           <span>File</span>
