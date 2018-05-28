@@ -13,7 +13,13 @@ class Spree::Admin::UserGroupsController < Spree::Admin::ResourceController
       flash.notice = Spree.t(:variant_pricing_updated_successfully)
     end if params[:price]
   end
-  
+
+  def import
+    UserGroup.import(params[:file])
+    flash.notice = "Uploaded Successfully"
+    redirect_to admin_user_groups_path
+  end
+
   private
   def build_object
     @object ||= end_of_association_chain.send((parent? ? :build : :new), object_params)

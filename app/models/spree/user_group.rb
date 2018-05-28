@@ -8,7 +8,7 @@ class Spree::UserGroup < ActiveRecord::Base
   money_methods :minimum_order
 
   include Spree::CalculatedAdjustments
-  
+
   def calculator_description
     return Spree.t(:none) if calculator.nil?
     calculator.description
@@ -21,4 +21,8 @@ class Spree::UserGroup < ActiveRecord::Base
       calculator.compute_item(variant, orig_price)
     end
   end
+
+  def import(file)
+  end
+  
 end
