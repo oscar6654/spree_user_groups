@@ -8,6 +8,7 @@ Spree::Core::Engine.append_routes do
 			collection do
 				post 'import'
 				post 'stock'
+				post 'product'
 			end
 		end
 	end
